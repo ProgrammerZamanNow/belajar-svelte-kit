@@ -1,6 +1,10 @@
 <script>
+    import {page} from "$app/state";
+
     const {children} = $props();
 </script>
+
+<p>{page.url.pathname}</p>
 
 <ul>
     <li><a href="/">Home</a></li>
