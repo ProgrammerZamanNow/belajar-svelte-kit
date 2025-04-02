@@ -1,5 +1,4 @@
-export function load({params}) {
-  return {
-    id: params.id
-  }
+export async function load({params, fetch}) {
+  const response = await fetch(`/api/products/${params.id}.json`)
+  return await response.json()
 }
