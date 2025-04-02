@@ -1,0 +1,18 @@
+<script>
+  const {data} = $props();
+
+  async function getProduct() {
+    const response = await fetch(`/api/products/${data.id}.json`);
+    return response.json();
+  }
+</script>
+
+{#await getProduct()}
+    <p>Loading product</p>
+{:then product}
+    <h1>{product.id} - {product.name}</h1>
+    <p>{product.description}</p>
+    <p>{product.price}</p>
+{:catch error}
+    <p>Error: {error.message}</p>
+{/await}
