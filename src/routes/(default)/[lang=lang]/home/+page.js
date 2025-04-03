@@ -1,5 +1,5 @@
 export async function load({params}) {
-  const lang = params.lang || "id"
+  const lang = params.lang;
 
   const hello = {
     "en": "Hello",
