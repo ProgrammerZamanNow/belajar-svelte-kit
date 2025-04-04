@@ -36,3 +36,6 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+
+HOST=127.0.0.1 PORT=4000 ORIGIN=http://127.0.0.1:4000 node --env-file=.env build
