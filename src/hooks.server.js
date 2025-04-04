@@ -1,7 +1,6 @@
-import {PUBLIC_NAME} from "$env/static/public";
-import {env} from "$env/dynamic/private";
-import {env as publicEnv} from "$env/dynamic/public";
+import {PUBLIC_HELLO, PUBLIC_NAME} from "$env/static/public";
 import {connect} from "$lib/server/database.js";
+import {HELLO} from "$env/static/private";
 
 export async function handle({event, resolve}) {
 
@@ -15,6 +14,6 @@ export function init(){
   connect();
   console.log(PUBLIC_NAME);
 
-  console.log(env.HELLO);
-  console.log(publicEnv.PUBLIC_HELLO);
+  console.log(HELLO);
+  console.log(PUBLIC_HELLO);
 }
